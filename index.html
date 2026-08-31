@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    header{
+        display: flex;
+        justify-content: space-around;
+        padding: 25px;
+        width: 100%;
+        background-color: rgb(105, 99, 99);
+        align-items: center;
+    }
+    .logo{
+        font-size: 25px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+    nav a{
+        color: #ffffff;
+        font-size: 18px;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+    .banner{
+        width: 100%;
+        height: 600px;
+        background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F14%2F75%2FwQygBn.jpg&f=1&nofb=1&ipt=0683d6e06cc241db0240e037826a823ccbf41959679d27ea47de3b4a36eac17a');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .cars{
+        width: 100%;
+        height: 1200px;
+        background-color: #000000;
+        padding-top: 50px;
+    }
+    .cars h1{
+        text-align: center;
+        color: #ffffff;
+        font-size: 50px;
+        padding-bottom: 20px;
+    }
+    .card {
+        background: #1a1a1a;
+        border-radius: 32px;
+        padding: 20px;
+        max-width: 360px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+        transition: transform 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #2e2e2e;
+        margin: auto;
+    }
+    .card img {
+        width: 350px;
+        height: 200px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 20px;
+        background: #2a2a2a;
+        display: block;
+        margin-bottom: 20px;
+        border: 1px solid #333;
+    }
+    .card h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+    /* description */
+    .card p {
+        font-size: 1.5rem;
+        color: #aaaaaa;
+        margin-bottom: 18px;
+        line-height: 1.5;
+        max-width: 280px;
+    }
+     /* price */
+    .card .price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #f5c542;
+        background: #2a2416;
+        padding: 8px 28px;
+        border-radius: 60px;
+        display: inline-block;
+        letter-spacing: 0.5px;
+        border: 1px solid #3f351f;
+        box-shadow: inset 0 2px 4px rgba(255, 215, 0, 0.05);
+    }
+    .card:hover {
+        transform: scale(1.01);
+    }
+    .cars_container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+    .about{
+        width: 100%;
+        height: 1000px;
+        background-color: #000000;
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 30px;
+        color: #ffffff;
+        font-size: 20px;
+    }
+    .about img{
+        width: 300px;
+    }
+
+    @media(max-width: 1024px){
+        .cars{
+            height: 1500px;
+        }
+        .about_2{
+            height: 1000px;
+            gap: 30px;
+            text-align: center;
+        }
+        .about{
+            text-align: center;
+        }
+    }
+
+    @media(max-width: 440px){
+        header{
+            flex-direction: column;
+        }
+        .title{
+            width: 90%;
+        }
+        .title h1{
+            font-size: 25px;
+        }
+        .cars{
+            height: 3000px;
+        }
+        .about_2{
+            height: 1200px;
+            gap: 30px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;    
+        }
+    }
+</style>
+<body>
+    <header>
+        <div class="logo">Auto Premium</div>
+        <nav>
+            <a href="#">Main</a>
+            <a href="#">Contents</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+    <section class="banner">
+    </section>
+
+    <section class="cars">
+        <h1>Cool Cars</h1>
+        <div class="cars_container">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5hneoePXv0n8dQiX94Dj_CHaFzPn47NZUzJEtZ8CwrQ&s=10">
+                <h1>Ferrari</h1>
+                <p>2020</p>
+                <div class="price">$ 90 000</div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0-SW-uK-rsce909jHZpzB9dqZXBQ1zZyb7XXUitUMWQ&s=10">
+                <h1>Lamborgini</h1>
+                <p>2019</p>
+                <div class="price">$ 400 000</div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJnADUwJHTv8ANC0QIglDx7jisGEi61isilMngiDflmA&s=10">
+                <h1>Lamborgini</h1>
+                <p>2023</p>
+                <div class="price">$ 500 000</div>
+            </div>
+            <div class="card">
+                <img src="https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/6419c87408ea69001e41be25.jpg">
+                <h1>Buggati</h1>
+                <p>2010</p>
+                <div class="price">$ 1 000 000</div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWNX5IyHLtcFW1taEHxPQ3MJOyWx4MUMEnSb52FiCyFA&s=10">
+                <h1>Mustang</h1>
+                <p>2017</p>
+                <div class="price">$ 100 000</div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-EffOwXoMDwQew8qzu7NIVle-lRU6v8FMbyG969FCyA&s=10">
+                <h1>Chevrolet</h1>
+                <p>2025</p>
+                <div class="price">$ 200 000</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="about">
+        <div class="text">
+            <p>
+                «Auto Premium» is a dynamically developing company in the automotive sales market,<br>
+                offering its clients an extensive selection of new and certified pre-owned vehicles<br>
+                from leading global brands.<br><br>
+                We value our customers' time, which is why we provide full transaction support —<br>
+                from vehicle selection based on individual parameters to legal paperwork,<br>
+                as well as advantageous financing programs or trade-in options.<br><br>
+                Our mission is to make the car-buying process as transparent, secure,<br>
+                and enjoyable as possible.
+            </p>
+
+        </div>
+        <img src="https://static.lada.ru/images/v6/press-releases/LADA%20Azimut%20interior.jpg" alt="">
+    </section>
+</body>
+</html>
